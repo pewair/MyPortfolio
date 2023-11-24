@@ -1,0 +1,24 @@
+main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+main.fs{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+main.elem{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 0px;
+    background-color: black;
+}
+main.white{
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+}
