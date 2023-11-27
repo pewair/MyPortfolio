@@ -1,2 +1,2 @@
 # MyPortfolio
-It's my portfolio.
+It's my 1st portfolio design.
