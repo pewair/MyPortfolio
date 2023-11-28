@@ -20,14 +20,95 @@ nav a:hover {
     color: white;
     }
     .main{
-        font-size: 80px;
+        font-size: 65px;
         text-align: left;
         position: relative;
-        top: 140px;
-        left: 280px;
+        top: 100px;
+        left: 200px;
         font-family: 'Poppins', sans-serif;
+        font-weight: 50;
     }
     .main i{
         color: white;
         font-family: 'Playfair Display', serif;
     }
+.time {
+    position: relative;
+    top: 100px;
+    left: 1200px;
+    color: white;
+}
+.content {
+    position: relative;
+    top: 500px;
+    left: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+}
+.content h2 {
+    color: white;
+}
+.content p {
+    color: rgb(0, 0, 0);
+}
+.content span {
+    color: rgb(255, 255, 255);
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+.zero {
+    width: 410px;
+    height: 541px;
+    border-radius: 40px;
+    position: relative;
+    bottom: 20px;
+    left: 550px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-out;
+    animation: float 5s infinite ease-in-out; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.zero:hover {
+    filter: grayscale(0%);
+}
+.one {
+    width: 493.5px;
+    height: 631.25px;
+    border-radius: 40px;
+    position: relative;
+    bottom: 160px;
+    left: 570px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-out;
+    animation: float 3s infinite ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.one:hover {
+    filter: grayscale(0%);
+}
+.two {
+    width: 282px;
+    height: 360px;
+    border-radius: 40px;
+    position: relative;
+    bottom: 80px;
+    right: 120px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-out;
+    animation: float 4s infinite ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.two:hover {
+    filter: grayscale(0%);
+}
+
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); 
+    }
+  }
+  
