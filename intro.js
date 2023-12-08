@@ -27,5 +27,5 @@ const fonts = [
   var delayInMilliseconds = 8000;
 
 setTimeout(function() {
-  window.location.href = "index.htm";
+  window.location.href = "page.html";
 }, delayInMilliseconds);
