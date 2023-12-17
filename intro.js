@@ -24,8 +24,8 @@ const fonts = [
     count++;
   },350);
 
-  var delayInMilliseconds = 8000;
+  var delayInMilliseconds = 6000;
 
 setTimeout(function() {
-  window.location.href = "page.html";
+  window.location.href = "index.html#main";
 }, delayInMilliseconds);
