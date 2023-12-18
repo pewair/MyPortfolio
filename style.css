@@ -149,5 +149,7 @@ footer {
     bottom: 10px;
     left: 250px;
 }  
-
+section {
+    overflow: hidden;
+}
   
