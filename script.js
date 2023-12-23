@@ -1,3 +1,32 @@
+function getRandomValue() {
+    return Math.random() * 100 - 50 + 'vw'; 
+}
+
+function updateRandomValues() {
+    document.documentElement.style.setProperty('--randomX1', getRandomValue());
+    document.documentElement.style.setProperty('--randomY1', getRandomValue());
+    document.documentElement.style.setProperty('--randomX2', getRandomValue());
+    document.documentElement.style.setProperty('--randomY2', getRandomValue());
+    document.documentElement.style.setProperty('--randomX3', getRandomValue());
+    document.documentElement.style.setProperty('--randomY3', getRandomValue());
+    document.documentElement.style.setProperty('--randomX4', getRandomValue());
+    document.documentElement.style.setProperty('--randomY4', getRandomValue());
+    document.documentElement.style.setProperty('--randomX5', getRandomValue());
+    document.documentElement.style.setProperty('--randomY5', getRandomValue());
+    document.documentElement.style.setProperty('--randomX6', getRandomValue());
+    document.documentElement.style.setProperty('--randomY6', getRandomValue());
+    document.documentElement.style.setProperty('--randomX7', getRandomValue());
+    document.documentElement.style.setProperty('--randomY7', getRandomValue());
+    document.documentElement.style.setProperty('--randomX8', getRandomValue());
+    document.documentElement.style.setProperty('--randomY8', getRandomValue());
+    document.documentElement.style.setProperty('--randomX9', getRandomValue());
+    document.documentElement.style.setProperty('--randomY9', getRandomValue());
+}
+
+setInterval(updateRandomValues, 30000);
+
+updateRandomValues();
+
 function updateLocalTime() {
     const localTime = new Date();
     
@@ -22,46 +51,41 @@ updateLocalTime();
 
 setInterval(updateLocalTime, 60000);
 
-const fonts = [
-    'Kirang Haerang',
-    'Indie Flower',
-    'Rye',
-    'Amatic SC',
-    'Bangers',
-    'Fredericka the Great'
-  ];
-  const letters = document.querySelectorAll('.letter');
-  let count=0;
+
+document.addEventListener('DOMContentLoaded', function () {
+    const customCursor = document.createElement('div');
+    customCursor.className = 'custom-cursor';
   
-  const rollIntro = () => {
-    letters.forEach(letter => {
-      
-      let randomFontIndex = Math.floor(Math.random() * fonts.length);
-      let randomFont = fonts[randomFontIndex];
-      letter.style.fontFamily=randomFont;
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+  
+    customCursor.appendChild(dot);
+    document.body.appendChild(customCursor);
+  
+    document.addEventListener('mousemove', function (e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+  
+      customCursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
     });
-  }
-  let introAnimation = setInterval(function() {
-    rollIntro();
-    if(count>15)
-      clearInterval(introAnimation);
-    count++;
-  },350);
-
-  var delayInMilliseconds = 6000;
-
-setTimeout(function() {
-  window.location.href = "index.html#main";
-}, delayInMilliseconds);
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      var main = document.getElementById('main');
-
-      window.scrollTo({
-        top: section2.offsetTop,
-        behavior: 'smooth'
-      });
-    }, 6000); 
   });
+  
+
+  function toggleDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+}
+
+
+    var scroll = new SmoothScroll('a[data-scroll]', {
+        speed: 800,
+        offset: 50
+    });
+
+    function scrollToSection(event, sectionId) {
+        event.preventDefault();
+        var targetSection = document.querySelector(sectionId);
+        if (targetSection) {
+            scroll.animateScroll(targetSection);
+        }
+    }
