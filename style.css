@@ -230,6 +230,7 @@ nav a:hover {
     left: 5vw;
     top: 260vh;
     font-size: 4vw;
+    text-decoration: none;
 }
 .c6 {
     width: 25vw;
