@@ -1,146 +1,83 @@
 * {
     margin: 0;
     padding: 0;
-}
-body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-color: #FAF9F6;
-    justify-content: center;
     box-sizing: border-box;
 }
-.absolute {
+body {
+    background-color: #000000;
+}
+#container {
+    height: fit-content;
+    width: fit-content;
+    color: #ffffff;
+    text-align: center;
     position: absolute;
-    top: 50px !important;
-    inset: 0;
-    justify-content: center;
+    top: 50vh;
+    left: 30vw;
 }
-
-.justify-center {
-    justify-content: center;
+.intro {
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
 }
-.bg-shape1 {
-    width: 200px;
-    height: 200px;
-    border-radius: 9999px;
-    position: relative;
-    left: 10%;
-    top: 10%;
-    rotate: 45deg;
+@keyframes changeFonts {
+    0% {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+    50% {
+        font-family: 'Playfair Display', serif;
+        color: yellow;
+    }
+    100% {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
 }
-.bg-shape2 {
-    width: 150px;
-    height: 150px;
-    border-radius: 9999px;
-    position: relative;
-    top: 5vh;
-    right: 5vw;
+.del-1 {
+    animation: changeFonts 1s;
 }
-
-.opacity-50 {
-    opacity: .5;
+.del-2 {
+    animation: changeFonts 2s;
 }
-.bg-blur {
-    filter: blur(30px);
+.del-3 {
+    animation: changeFonts 3s;
 }
-.bg-primary {
-    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+.del-4 {
+    animation: changeFonts 4s;
 }
-.bg-teal {
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+.del-5 {
+    animation: changeFonts 5s;
 }
-.bg-purple {
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+.del-6 {
+    animation: changeFonts 6s;
 }
-
-
-
-
-
-    #frame {
-        height: 60vh;
-        width: 80vw;
-        background-color: #ffffff;
-        position: absolute;
-        top: 20%;
-        left: 10%;
-        border-radius: 5%;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    .photo {
-        height: 70%;
-        width: 90%;
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        border-radius: 30% 5% 5% 5%;
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
-    }
-    .photo::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-size: cover;
-        background-position: center;
-        opacity: 0.5; 
-        z-index: -1; 
-    }
-    .qrcode {
-        height: fit-content;
-        width: fit-content;
-        position: absolute;
-        top: 84%;
-        left: 7%;
-    }
-    .dateTime {
-        text-align: right;
-        position: absolute;
-        left: 75%;
-        font-size: small;
-        top: 2%;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .asterisk {
-        font-size: 5em;
-        position: absolute;
-        left: 1%;
-        top: 6%;
-        color: grey;
-        z-index: 10;
-    }
-    .author {
-        height: 12%;
-        width: 65%;
-        position: absolute;
-        top: 84%;
-        left: 25%;
-        text-align: right;
-        font-size: 1.25em;
-    }
-    .quote {
-        position: relative;
-        z-index: 1;
-        height: 80%;
-        width: 80%;
-        top: 10%;
-        left: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #000000;
-    }
-    .new {
-        position: absolute;
-        font-weight: bold;
-        left: 14%;
-        font-size: 4em;
-        top: 1%;
-        z-index: 10;
-    }
+.del-7 {
+    animation: changeFonts 7s;
+}
+.del-8 {
+    animation: changeFonts 8s;
+}
+.del-9 {
+    animation: changeFonts 9s;
+}
+.del-10 {
+    animation: changeFonts 10s;
+}
+.del-11 {
+    animation: changeFonts 11s;
+}
+.del-12 {
+    animation: changeFonts 12s;
+}
+.del-13 {
+    animation: changeFonts 13s;
+}
+.del-14 {
+    animation: changeFonts 14s;
+}
+.del-15 {
+    animation: changeFonts 15s;
+}
+.del-16 {
+    animation: changeFonts 16s;
+}
