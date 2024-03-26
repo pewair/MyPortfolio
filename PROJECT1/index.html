@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Website</title>
+    <style>
+       .container {
+            text-align: center; /* Center align the content */
+        }
+
+        .response-buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            gap: 20px; /* Add some spacing between the buttons */
+        }
+
+        .response-buttons button {
+            width: 30vw; /* Set button width to 30% of the viewport width */
+            font-size: 1.5em; /* Increase font size for better visibility */
+            padding: 10px; /* Add some padding to the buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Marry Me?</h1>
+        <div class="gif-container">
+            <!-- Added autoplay attribute here -->
+            <img id="proposal-gif" src="first.gif" alt="Proposal GIF">
+        </div>
+        <div id="response-buttons">
+            <button onclick="respond('yes')">Yes</button>
+            <button onclick="respond('no')">No</button>
+        </div>
+    </div>
+
+    <script>
+        var gifTimer;
+
+        function resetGif() {
+            var gif = document.getElementById('proposal-gif');
+            gif.src = gif.src;
+        }
+
+        function playLoopingGif(gifSrc) {
+            clearInterval(gifTimer); // Clear any existing intervals
+            var gif = document.getElementById('proposal-gif');
+            gif.src = gifSrc;
+            if (gifSrc === 'yes.gif') { // If it's the "yes" GIF, loop it
+                gifTimer = setInterval(function() {
+                    resetGif();
+                }, gif.duration * 1000);
+            }
+        }
+
+        function respond(answer) {
+            var gif = 'first.gif';
+            var message = '';
+            
+            if (answer === 'yes') {
+                gif = 'yes.gif';
+                playLoopingGif(gif);
+                message = "Congratulations! May your lives be filled with happiness.";
+                // Allow user to leave/close website
+                window.onbeforeunload = null;
+            } else if (answer === 'no') {
+                gif = 'no.gif';
+                playLoopingGif(gif);
+                var messages = [
+                    "Think again, please.",
+                    "Are you sure? Think about it.",
+                    "Maybe reconsider?",
+                    "Don't make hasty decisions.",
+                    "Give it another thought.",
+                    "Think about the future."
+                ];
+                message = messages[Math.floor(Math.random() * messages.length)];
+                // Prevent user from leaving/closing website
+                window.onbeforeunload = function() {
+                    return "You haven't responded yet. Are you sure you want to leave?";
+                };
+            }
+            
+            document.getElementById('proposal-gif').src = gif;
+            resetGif();
+            
+            // Display message
+            alert(message);
+        }
+
+        // Start with the default GIF looping
+        window.onload = function() {
+            playLoopingGif('first.gif');
+        };
+    </script>
+</body>
+</html>
